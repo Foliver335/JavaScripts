@@ -1,0 +1,43 @@
+<!DOCTYPE html><!-- doctype do HTML5 -->
+<html>
+	<head>
+		<meta http-equiv="Content-Language" content="pt-br">
+		<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+		<meta name="ProgId" content="FrontPage.Editor.Document">
+		<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+		<meta charset="utf-8">
+		<title>Calculadora Salarial</title>
+	</head>
+
+<body>
+	<h1>Calculadora Salarial</h1>
+  <table border="2">
+
+<form name="Calculadora">
+  O valor do salário/hora: R$ 
+  <input type="text" name="RecHora" size="10"><br> O número de horas trabalhadas no mês:&nbsp; 
+  <input type="text" name="Horas" size="5"><br>O percentual de desconto do INSS &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  <input type="text" name="Porcentagem" size="3">%<p>&nbsp;&nbsp;&nbsp;&nbsp;
+  	<input type="submit" value="Salário Liquido e Bruto" name="CalcularB" onclick="Calcula()"></p>
+</form>
+<Script Language="JavaScript">
+<!--
+	/* Script de Soma */	
+	var ValH, HR, INSS, V1, V2, V3;	
+	function Calcula() {
+		ValH = document.Calculadora.RecHora.value;
+		HR = document.Calculadora.Horas.value;
+		INSS = document.Calculadora.Porcentagem.value;		
+		V1 = parseFloat(ValH) * parseFloat(HR);
+		V2 = (parseFloat(INSS) / 100) * V1;
+		V3 = V1 + V2;
+		V4 = V1 - V2;
+		alert('Salário Bruto = R$' + V3);
+		alert('Salário Líquido = R$' + V4);		
+	    /* document.write('Salário Líquido = R$', V3); */
+	    /* document.write('Salário Líquido = R$', V4); */		
+	}
+//-->
+</Script>
+</body>
+</html>
