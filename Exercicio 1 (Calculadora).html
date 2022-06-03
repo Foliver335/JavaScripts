@@ -14,15 +14,17 @@
   <table border="2">
 
 <form name="Calculadora">
-  O valor do salário/hora: R$ 
-  <input type="text" name="RecHora" size="10"><br> O número de horas trabalhadas no mês:&nbsp; 
-  <input type="text" name="Horas" size="5"><br>O percentual de desconto do INSS &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  O valor do salÃ¡rio/hora: R$ 
+  <input type="text" name="RecHora" size="10"><br>
+O nÃºmero de horas trabalhadas no mÃªs:&nbsp; 
+  <input type="text" name="Horas" size="5"><br>
+O percentual de desconto do INSS &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
   <input type="text" name="Porcentagem" size="3">%<p>&nbsp;&nbsp;&nbsp;&nbsp;
-  	<input type="submit" value="Salário Liquido e Bruto" name="CalcularB" onclick="Calcula()"></p>
+  	<input type="submit" value="SalÃ¡rio Liquido e Bruto" name="CalcularB" onclick="Calcula()"></p>
 </form>
 <Script Language="JavaScript">
 <!--
-	/* Script de Soma */	
+	/* Calculo do SalÃ¡rio */	
 	var ValH, HR, INSS, V1, V2, V3;	
 	function Calcula() {
 		ValH = document.Calculadora.RecHora.value;
@@ -32,10 +34,10 @@
 		V2 = (parseFloat(INSS) / 100) * V1;
 		V3 = V1 + V2;
 		V4 = V1 - V2;
-		alert('Salário Bruto = R$' + V3);
-		alert('Salário Líquido = R$' + V4);		
-	    /* document.write('Salário Líquido = R$', V3); */
-	    /* document.write('Salário Líquido = R$', V4); */		
+		alert('SalÃ¡rio Bruto = R$' + V3);
+		alert('SalÃ¡rio LÃ­quido = R$' + V4);		
+	    /* document.write('SalÃ¡rio LÃ­quido = R$', V3); */
+	    /* document.write('SalÃ¡rio LÃ­quido = R$', V4); */		
 	}
 //-->
 </Script>
